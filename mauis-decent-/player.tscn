@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://cxg4olw0g711h"]
+
+[ext_resource type="Script" uid="uid://dqby51i0ep0lu" path="res://character_body_2d.gd" id="1_onrkg"]
+[ext_resource type="Texture2D" uid="uid://c2m2b86cylvjy" path="res://sprites/moana_and_maui_by_pixelnebula_ddfdwzv-fullview.png" id="2_i3pqv"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_py7nx"]
+size = Vector2(8.96991, 3.5)
+
+[node name="player" type="Node2D" unique_id=1109415156]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=987629805]
+position = Vector2(107, 47)
+scale = Vector2(0.16, 0.16)
+script = ExtResource("1_onrkg")
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D" unique_id=1077045310]
+position = Vector2(-668.74994, -293.75003)
+scale = Vector2(3.305, 0.774)
+texture = ExtResource("2_i3pqv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=1057428113]
+position = Vector2(-668.75, -293.75)
+scale = Vector2(66.38, 66.38)
+shape = SubResource("RectangleShape2D_py7nx")
+
+[node name="Camera2D" type="Camera2D" parent="CharacterBody2D" unique_id=813882349]
+position = Vector2(-668.75, -293.75)
